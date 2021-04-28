@@ -10,4 +10,5 @@ Instructions:
 - The Nunito font used in the mockup can be downloaded or referenced. It is free and can be found here: https://fonts.google.com/specimen/Nunito
 
 Extra Credit:
+- Populate the genres in the drop down using the Genres variable in the HomeViewModel
 - Add a media query for widths less than or equal to 712px that will modify the Index page to look like it does on Page 3 of the XD doc

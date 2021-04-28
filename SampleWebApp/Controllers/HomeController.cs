@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SampleWebApp.Models;
+using SampleWebApp.ViewModels;
 
 namespace SampleWebApp.Controllers
 {
@@ -12,7 +13,10 @@ namespace SampleWebApp.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var Model = new HomeViewModel();
+            Model.Genres = new List<string> {"Action/Adventure", "Fantasy", "Historical Fiction", "Horror", "Mystery", "Romance", "Science Fiction"};
+            
+            return View(Model);
         }
 
         public IActionResult About()
