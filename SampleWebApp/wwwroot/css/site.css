@@ -1,10 +1,138 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+:root {
+  --main-RH-Ink: #061054;
+  --main-RH-Purple: #B55894;
+  --main-RH-Yellow: #F8C902;
+  --main-pink: #F0DEEA;
+  --main-white: #ffffff;
+  --main-grey-lightest: #F5F5F5;
+  --main-grey-light: #DFDFDF;
+  --main-grey-medium: #000029;
+  --main-grey-dark: #707070;
+}
+
+/* Color classes */
+.RH-Ink {
+  color: var(--main-RH-Ink) !important;
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+}
+
+p {
+  color: var(--main-RH-Ink);
+}
+
+body {
+  font-family: Nunito, Helvetica, Arial, Verdana, Trebuchet MS;
+  background-color: var(--main-grey-lightest);
+}
+
+.container {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+main {
+  padding-top: 50px;
+}
+
+#about-us {
+  margin-top: 64px;
+}
+
+#about-us h3 {
+  font: normal normal bold 20px/27px Nunito;
+}
+
+.about-flex-item {
+  padding: 12px;
+}
+
+.about-flex .img {
+  padding-left: 0px;
+}
+
+.about-flex .blank {
+  flex: 0 1 0;
+}
+
+.about-flex .text {
+  max-width: 539px;
+  line-height: 22px;
+}
+
+.navbar-brand {
+  padding: 4px 0;
+}
+
+.navbar {   
+  position: fixed;
+  width: 100%; 
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .container {
+  padding-top: 6px;
+  padding-bottom: 4px;
+  margin: 0;
+}
+
+
+.navbar-nav {
+  align-items: center;
+}
+
+
+.nav-item {
+  padding: 0px 0px 0px 32px;
+  font: normal normal normal 18px/24px Nunito;
+}
+
+.nav-item a {
+  padding: 0;
+  text-decoration: none;
+  color: var(--main-RH-Ink);
+}
+
+.nav-item a:hover {
+  color: var(--main-RH-Purple);
+}
+
+#user-icon {
+  padding: 0;
+  font-size: 1.5em;
+}
+
+
+.footer-logo {
+  float: left;
+}
+
+.social-media {
+  float: right;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+
+.social-media-item {
+  font-size: 1.5em;
+  padding-right: 0px;
+  padding-left: 24px;
+}
+
+.social-media-icon {
+  color:var(--main-white);
 }
 
 /* Sticky footer styles
@@ -15,6 +143,39 @@ html {
 @media (min-width: 768px) {
   html {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 712px) {
+  .container {
+    max-width: 1366px !important;
+  }
+}
+
+@media (max-width: 712px) {
+  .container {
+    padding: 0px 32px !important;
+  }
+  .about-flex {
+    flex-direction:column;
+  }
+  #about-us h3 {
+    text-align: center;
+  }
+  .about-flex .img {
+    padding-left: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-item {
+    font-size: 0.9em;
+    padding: 0px 0px 0px 16px;
+  } 
+
+  .social-media-item {
+    font-size: 1em;
   }
 }
 
@@ -53,4 +214,5 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
+  background-color: var(--main-RH-Purple);
 }
