@@ -12,3 +12,6 @@ Instructions:
 Extra Credit:
 - Populate the genres in the drop down using the Genres variable in the HomeViewModel
 - Add a media query for widths less than or equal to 712px that will modify the Index page to look like it does on Page 3 of the XD doc
+
+Misc:
+- Visual Studio Code is a great choice for an editor. It can be downloaded for free here: https://code.visualstudio.com/
