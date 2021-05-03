@@ -201,12 +201,13 @@ main {
 }
 
 #filter {
-  padding: 64px 0px 64px 0px;
+  padding: 48px 0px 64px 0px;
 }
 
 #filter label {
-  font: normal normal 600 12px/16px Nunito;
-  margin:0;
+    font: normal normal 600 12px/16px Nunito;
+    margin: 0;
+    color: var(--main-grey-dark);
 }
 
 .select2 {
@@ -310,7 +311,7 @@ main {
   justify-items: center;
   align-self: start;
   flex-grow: 1;
-  padding-bottom:157px;
+  padding-bottom:101px;
 }
 
 .book {
@@ -357,6 +358,7 @@ main {
 
 
 .book-info {
+  color: var(--main-RH-Ink);
   vertical-align: top;
   display: flex;
   flex-direction: column;
@@ -660,7 +662,7 @@ html {
     padding-right: 64px;
   }
   #filter {
-    margin: 0 0 64px 64px;
+    margin: 0 0 0px 64px;
   }
   .footer {
     padding: 0px 64px;
