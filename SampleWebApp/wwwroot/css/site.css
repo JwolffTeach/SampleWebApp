@@ -492,6 +492,10 @@ main {
   float: right;
 }
 
+.social-media-item a:hover {
+  text-decoration: none;
+}
+
 .social-media-icon {  
   color: var(--main-RH-Purple);
   width: 38px;
