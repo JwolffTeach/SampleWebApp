@@ -2,9 +2,134 @@
     ViewData["Title"] = "Home";
 }
 @model SampleWebApp.ViewModels.HomeViewModel
-
-<div class="text-center">
-    <h1 class="display-4">Sample Web App</h1>
-    <p>Follow the mockup to make this website look as close to the design as possible.</p>
-    <p>Adobe XD mockup located <a href="https://xd.adobe.com/view/ecd35bb6-cb20-434f-be03-5f424e48c8d1-b980/screen/112e2a35-267d-4c9b-90ea-4545069c3ab5/">here</a></p>
+<div class="dark-pink-bg">
+    <div class="light-pink-bg">
+        
+    </div>
 </div>
+<div class="features-background">
+    <div class="features-grid">
+        <div class="award-image">
+                <svg id="award-svg" xmlns="http://www.w3.org/2000/svg" width="376" height="376" viewBox="0 0 376 376"><defs><style>.a{fill:#fff;stroke:#b55894;stroke-width:15px;}.b,.c,.d{fill:#061054;}.b{font-size:29px;}.b,.c{font-family:Nunito-Bold, Nunito;font-weight:700;}.c{font-size:87px;}.d{font-size:43px;font-family:Nunito-Black, Nunito;font-weight:800;}.e{fill:#b55894;}.f{stroke:none;}.g{fill:none;}</style></defs><g transform="translate(-1641 -333)"><g class="a" transform="translate(1641 333)"><circle class="f" cx="188" cy="188" r="188"/><circle class="g" cx="188" cy="188" r="180.5"/></g><g transform="translate(1698.919 440.293)"><text class="b" transform="translate(5.081 90.983)"><tspan x="0" y="0">CHOICE AWARDS</tspan></text><text class="c" transform="translate(25.081 178.707)"><tspan x="0" y="0">2020</tspan></text><g transform="translate(-47.919 -13.331)"><text class="d" transform="translate(104.081 53.039)"><tspan x="0" y="0">book</tspan><tspan class="e" y="0">shelf</tspan></text><path class="e" d="M40.168,4.5H12.945A5.437,5.437,0,0,0,7.527,9.945L7.5,53.5l19.057-8.167L45.613,53.5V9.945A5.461,5.461,0,0,0,40.168,4.5Zm0,40.835L26.557,39.4,12.945,45.335V9.945H40.168Z" transform="translate(40.5 9.13)"/></g></g></g></svg>
+        </div>
+        <div class="book-feature">
+            <div class="book-feature-cover">
+                <img class="book-feature-cover-img" src="~/img/books/The Guest List.png" alt="The Guest List book cover" />
+            </div>
+            <div class="book-feature-details">
+                <h2 class="feature-category">BEST MYSTERY 2020</h2>
+                <h4 class="feature-title">The Guest List</h4>
+                <p class="feature-author">By Lucy Foley</p>
+                <div class="feature-description">
+                    <p>
+                    Lucy Foley ran away with this year’s Mystery & Thriller award by inviting us to 
+                    the best wedding ever! And by “best” we mean “most terrifying.” Jules and Will 
+                    have chosen to hold their wedding on a remote island off the coast of Ireland. 
+                    Then the storm hits. Then the body is found. It’s like the old Irish adage: It’s 
+                    not a party until somebody ends up dead.
+                    </p>
+                </div>
+                <form class="feature-view" action="">
+                    <button class="btn">View</button>
+                </form>
+            </div>
+        </div>
+        <div class="feature-empty">
+        </div>
+    </div>
+    <div class="features-bottom-border"></div>
+
+</div>
+<div class="container">
+    <div id="filter">
+        <label for="book-genre-choice">Filter by Genre</label><br />
+        <select id="select" required>
+                @foreach (var genre in Model.Genres) {
+                    <option value ="@genre" >@genre</option>
+                }
+        </select>
+    </div>
+    <div id="book-titles">
+        <!-- Book Titles is populated from the showBooks() function -->
+    </div>
+</div>
+
+
+@section scripts {
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script> showBooks(); </script>
+    <script>
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2({
+                theme: "classic"
+            });
+        });
+
+        /**
+        * A select2 adapater combining SingleSelction view
+        * and searchbox - replacing the view - when it needs to find and select another option
+        */
+        $.fn.select2.amd.define("SearchableSingleSelection", [
+        "select2/utils",
+        "select2/selection/single",
+        "select2/selection/eventRelay",
+        "select2/dropdown/search"
+        ],
+        function (Utils, SingleSelection, EventRelay, DropdownSearch) {
+        var adapter = Utils.Decorate(SingleSelection, DropdownSearch);
+        adapter = Utils.Decorate(adapter, EventRelay);
+
+        adapter.prototype.render = function () {
+            var $rendered = DropdownSearch.prototype.render.call(this, SingleSelection.prototype.render);
+
+            this.$searchContainer.hide();
+            this.$element.siblings('.select2').find('.selection').prepend(this.$searchContainer);
+
+            return $rendered;
+        };
+
+        var bindOrigin = adapter.prototype.bind;
+        adapter.prototype.bind = function (container) {
+            var self = this;
+
+            bindOrigin.apply(this, arguments);
+
+            container.on('open', function () {
+            self.$selection.hide();
+            self.$searchContainer.show();
+            });
+
+            container.on('close', function () {
+            self.$searchContainer.hide();
+            self.$selection.show();
+            });
+        };
+
+        return adapter;
+        });
+
+        /*
+        * A select2 adapter to show simple dropdown list without a searchbox inside
+        */
+        $.fn.select2.amd.define("UnsearchableDropdown", [
+        "select2/utils",
+        "select2/dropdown",
+        "select2/dropdown/attachBody",
+        "select2/dropdown/closeOnSelect"
+        ],
+        function (Utils, Dropdown, AttachBody, CloseOnSelect) {
+        var adapter = Utils.Decorate(Dropdown, AttachBody);
+        adapter = Utils.Decorate(adapter, CloseOnSelect);
+        return adapter;
+        });
+
+        $('#select').select2({
+            data: [],
+        selectionAdapter: $.fn.select2.amd.require("SearchableSingleSelection"),
+        dropdownAdapter: $.fn.select2.amd.require("UnsearchableDropdown"),
+        placeholder: "--Placeholder--"
+        });
+    </script>
+}

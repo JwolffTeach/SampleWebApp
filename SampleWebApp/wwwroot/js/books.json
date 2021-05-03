@@ -1,0 +1,238 @@
+{
+    "Books": [
+        {
+            "title": "The Kite Runner",
+            "author": "Khaled Hosseini",
+            "rating": 4.5,
+            "image": "Kite Runner"
+        },
+        {
+            "title": "Bridge to Terabithia",
+            "author": "Katherine Paterson",
+            "rating": 4,
+            "image": "Bridge to Terabithia"
+        },
+        {
+            "title": "Red Queen",
+            "author": "Victoria Aveyard",
+            "rating": 4.5,
+            "image": "Red Queen"
+        },
+        {
+            "title": "Glass Sword",
+            "author": "Victoria Aveyard",
+            "rating": 4,
+            "image": "Glass Sword"
+        },
+        {
+            "title": "King's Cage",
+            "author": "Victoria Aveyard",
+            "rating": 4,
+            "image": "King's Cage"
+        },
+        {
+            "title": "War Storm",
+            "author": "Victoria Aveyard",
+            "rating": 4,
+            "image": "War Storm"
+        },
+        {
+            "title": "The Goose Girl",
+            "author": "Shannon Hale",
+            "rating": 4.5,
+            "image": "Goose Girl"
+        },
+        {
+            "title": "Enna Burning",
+            "author": "Shannon Hale",
+            "rating": 4,
+            "image": "Enna Burning"
+        },
+        {
+            "title": "River Secrets",
+            "author": "Shannon Hale",
+            "rating": 4.5,
+            "image": "River Secrets"
+        },
+        {
+            "title": "Forest Born",
+            "author": "Shannon Hale",
+            "rating": 4.5,
+            "image": "Forest Born"
+        },
+        {
+            "title": "Last Star Burning",
+            "author": "Caitlin Sangster",
+            "rating": 4,
+            "image": "Last Star Burning"
+        },
+        {
+            "title": "Shatter the Suns",
+            "author": "Caitlin Sangster",
+            "rating": 4,
+            "image": "Shatter the Suns"
+        },
+        {
+            "title": "Dead Moon Rising",
+            "author": "Caitlin Sangster",
+            "rating": 4.5,
+            "image": "Dead Moon Rising"
+        },
+        {
+            "title": "Harry Potter and the Sorcerer's Stone",
+            "author": "J.K Rowling",
+            "rating": 4.5,
+            "image": "HP2"
+        },
+        {
+            "title": "Harry Potter and the Chamber of Secrets",
+            "author": "J.K Rowling",
+            "rating": 4.5,
+            "image": "HP1"
+        },
+        {
+            "title": "Harry Potter and the Prisoner of Azkaban",
+            "author": "J.K Rowling",
+            "rating": 4.5,
+            "image": "HP3"
+        },
+        {
+            "title": "Harry Potter and the Goblet of Fire",
+            "author": "J.K Rowling",
+            "rating": 4.5,
+            "image": "HP4"
+        },
+        {
+            "title": "Harry Potter and the Order of the Phoenix",
+            "author": "J.K Rowling",
+            "rating": 4.5,
+            "image": "HP5"
+        },
+        {
+            "title": "Harry Potter and the Half-Blood Prince",
+            "author": "J.K Rowling",
+            "rating": 4.5,
+            "image": "HP6"
+        },
+        {
+            "title": "Harry Potter and the Deathly Hallows",
+            "author": "J.K Rowling",
+            "rating": 4.5,
+            "image": "HP7"
+        },
+        {
+            "title": "Cinder",
+            "author": "Marissa Meyer",
+            "rating": 4.5,
+            "image": "Cinder"
+        },
+        {
+            "title": "Scarlet",
+            "author": "Marissa Meyer",
+            "rating": 4.5,
+            "image": "Scarlet"
+        },
+        {
+            "title": "Cress",
+            "author": "Marissa Meyer",
+            "rating": 4.5,
+            "image": "Cress"
+        },
+        {
+            "title": "Winter",
+            "author": "Marissa Meyer",
+            "rating": 4.5,
+            "image": "Winter"
+        },
+        {
+            "title": "Ender's Game",
+            "author": "Orson Scott Card",
+            "rating": 4.5,
+            "image": "Ender's Game"
+        },
+        {
+            "title": "The Hunger Games",
+            "author": "Suzanne Collins",
+            "rating": 4.5,
+            "image": "The Hunger Games"
+        },
+        {
+            "title": "Catching Fire",
+            "author": "Suzanne Collins",
+            "rating": 4.5,
+            "image": "Catching Fire"
+        },
+        {
+            "title": "Mockingjay",
+            "author": "Suzanne Collins",
+            "rating": 4.5,
+            "image": "Mocking Jay"
+        },
+        {
+            "title": "The Giver",
+            "author": "Lois Lowry",
+            "rating": 4.5,
+            "image": "The Giver"
+        },
+        {
+            "title": "Welcome to Night Vale",
+            "author": "Joseph Fink",
+            "rating": 4,
+            "image": "Welcome to Night Vale"
+        },
+        {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "Douglas Adams",
+            "rating": 4.5,
+            "image": "Hitchhiker's Guide"
+        },
+        {
+            "title": "A Study in Scarlet",
+            "author": "Arthur Conan Doyle",
+            "rating": 4.5,
+            "image": "A Study in Scarlet"
+        },
+        {
+            "title": "Partials",
+            "author": "Dan Wells",
+            "rating": 4,
+            "image": "Partials"
+        },
+        {
+            "title": "Fragments",
+            "author": "Dan Wells",
+            "rating": 4.5,
+            "image": "Fragments"
+        },
+        {
+            "title": "Ruins",
+            "author": "Dan Wells",
+            "rating": 4.5,
+            "image": "Ruins"
+        },
+        {
+            "title": "The Wednesday Wars",
+            "author": "Gary D. Schmidt",
+            "rating": 4.5,
+            "image": "Wednesday Wars"
+        },
+        {
+            "title": "The Lion, the Witch and the Wardrobe",
+            "author": "C.S. Lewis",
+            "rating": 4.5,
+            "image": "Narnia"
+        },
+        {
+            "title": "The Angel Experiment",
+            "author": "James Patterson",
+            "rating": 4.5,
+            "image": "Maximum Ride"
+        },
+        {
+            "title": "The Outsiders",
+            "author": "S.E. Hinton",
+            "rating": 4.5,
+            "image": "The Outsiders"
+        }
+    ]
+}
