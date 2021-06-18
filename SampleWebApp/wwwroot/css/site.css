@@ -779,3 +779,26 @@ html {
     padding-left: 8px;
   }
 }
+
+.select2-selection__arrow > b {
+  transform: rotate(0deg);
+  animation-name: unopen;
+  animation-duration: 0.5s;
+}
+
+.select2-search::after {
+  transform: rotate(0deg);
+  animation-name: open;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+}
+
+@keyframes unopen {
+  from {transform: rotate(180deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes open {
+  from {transform: rotate(180deg);}
+  to {transform: rotate(0deg);}
+}
